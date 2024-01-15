@@ -1,6 +1,12 @@
 name: Print Temperature of Dynamically Provided City
 
 # Add the correct triggers for this workflow
+on: 
+  workflow-dispatch:
+    inputs:
+      version:
+        description: 'City to get temperature from'
+          required: false
 
 jobs:
   print_temperature:
@@ -19,4 +25,6 @@ jobs:
 
       - name: Run app and print temperature
         # Update the line below such that the correct city is passed to the app
+        env: 
+          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
         run: cd app && python3 main.py Brussels
