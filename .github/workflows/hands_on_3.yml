@@ -6,8 +6,8 @@ on:
     inputs:
       version:
         description: 'City to get temperature from'
-        required: false
-
+        required: true
+        default: 'Brussels'
 jobs:
   print_temperature:
     runs-on: ubuntu-latest
@@ -27,4 +27,4 @@ jobs:
         # Update the line below such that the correct city is passed to the app
         env: 
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
-        run: cd app && python3 main.py Brussels
+        run: cd app && python3 main.py ${{ github.event.inputs.city }}
