@@ -22,4 +22,4 @@ jobs:
       - name: Run app and print secret temperature
         env: 
             WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
-        run: cd app && python3 main.py ${{ github.event.inputs.city }}
+        run: cd app && python3 main.py Brussels
