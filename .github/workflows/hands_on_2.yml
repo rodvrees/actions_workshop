@@ -18,4 +18,11 @@ jobs:
         run: cd app && pip install -r requirements.txt
 
       # Add steps that allow this workflow to run a linter on the Python code in the app directory
+      
+      - name: Install pylint
+        run: pip install pylint
 
+      - name: Run linter
+        run: cd app && pylint *.py
+
+      
