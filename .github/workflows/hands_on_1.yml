@@ -2,13 +2,13 @@ name: Count python lines
 on: [push]
 jobs:
   run_python_counter:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Count python lines
-      run: |
-        echo "Counting lines of python code"
-        find . -name '*.py' | xargs wc -l
+      - name: Count python lines
+        run: |
+          echo "Counting lines of python code"
+          find . -name '*.py' | xargs wc -l
     
