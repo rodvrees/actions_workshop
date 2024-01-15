@@ -1,5 +1,5 @@
 name: Count python lines
-
+on: [push]
 jobs:
   run_python_counter:
   runs-on: ubuntu-latest
