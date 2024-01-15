@@ -6,7 +6,7 @@ on:
     inputs:
       version:
         description: 'City to get temperature from'
-          required: false
+        required: false
 
 jobs:
   print_temperature:
