@@ -2,7 +2,7 @@ name: Print Temperature of Dynamically Provided City
 
 # Add the correct triggers for this workflow
 on: 
-  workflow-dispatch:
+  workflow_dispatch:
     inputs:
       version:
         description: 'City to get temperature from'
